@@ -1,0 +1,15 @@
+#dragto{
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+    margin-bottom: 5px;
+    
+    
+}
+#drag1{
+    border: 1px solid black;
+    height: 100px;
+    width: 200px;
+    margin-top: 20px;
+    
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+
+
+</head>
+
+<body>
+
+
+    <header>
+        <img src="images/ibm.png" alt="IBM" id="logo">
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="downloads.html">Downloads</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="singin.html">Sing In</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <span>
+            Search: <input type="search" name="searchInput" id="searchInput" placeholder="Enter Your Search">
+        </span>
+
+    </header>
+    <main class="indexmain">
+        <div id="multimedia">
+        <h4><video width="600" height="300" autoplay controls muted>
+                <source src="videos/mov_bbb.mp4" type="video/mp4">
+                <source src="videos/mov_bbb.webm">
+                <source src="vidoes/mov_bbb.obb">
+            </video></h4>
+        </div>
+        <h4><span>International Business Machines Corporation is an American multinational information technology company <br><br>
+            headquartered in Armonk, New York, with operations in over 170 countries.</span></h4>
+        <h2>Download Tools From IBM</h2>
+        <button>Download for PC</button>
+        <button>Download for macOS</button>
+
+        <button onclick="getLocation()">Current Location</button>
+
+        <p id="demo"></p>
+        <div id="dragNdrop">
+            <h4>HTML Drag and Drop</h4>
+            <p>Drag and Drop API</p>
+            <div id="dragNdrop">
+
+        <p>Drag the image from here and drop in the box below</p>
+        <div class="draggableContainer">
+        <div id="dragto" 
+            ondrop="drop(event)" 
+            ondragover="allowDrop(event)" 
+           >
+        <img id="drag1" 
+            src="images/ibm.png" 
+            draggable="true" 
+            ondragstart="drag(event)" width="336" height="69">
+        </div>
+        
+       
+        <div id="drag1" 
+            ondrop="drop(event)" 
+            ondragover="allowDrop(event)" ></div>
+        </div></div>
+        <script>
+            function drag(evt) {
+                evt.dataTransfer.setData("text", evt.target.id);
+            }
+            function allowDrop(evt) {
+                evt.preventDefault();
+            }
+            function drop(evt) {
+                evt.preventDefault();
+                var data = evt.dataTransfer.getData("text");
+                evt.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
+    </div></div>
+    </main>
+    <footer>
+        <nav id="secondaryNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="downloads.html">Downloads</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="singin.html">Sing In</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        </ul>
+        <p>Copyright &copy 2019</p>
+    </nav>
+    </footer>
+
+
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+        }
+
+    </script>
+    
+
+</body>
+
+</html>

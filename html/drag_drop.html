@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="background-color: black; height: 500px; width: 500px;"></div>
+
+        <img id="drag1" src="images/ibm.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        <video>
+            <source="videos/mov_bbb.mp4">
+        </video>
+        <script>
+            function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+        </script>
+</body>
+</html>

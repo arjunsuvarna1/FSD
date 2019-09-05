@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+    <main>
+        <form action="#">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Name" required autofocus>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" pattern=".+@ibm.com" required placeholder="Enter IBM Email">
+            <br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required placeholder="Enter Password">
+            <br>
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" required placeholder="Confirm Password">
+            <br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" required placeholder="Enter Phone Number">
+            <br>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob" required>
+            <br>
+            <label for="color">Preffered Color</label>
+            <input type="color" name="color" id="color">
+            <br>
+            <label for="linkedin">Linked In Profile</label>
+            <input type="url" name="linkedin" id="linkedin">
+            <br>
+            <label for="radio">whose fan are you?</label>
+            <input type="radio" id="celeb" value="justin" name="celeb">Justin
+            <input type="radio" name="celeb" id="celeb" value="taylor">Taylor
+
+            </select>
+
+            <br>
+            <label for="exp">Expirence</label>
+            <input type="range" name="exp" id="exp" placeholder="Select Expirence" min="0" max="50">
+            <br>
+            <label for="select">Select option</label>
+            <input list="techilike" id="tech" name="tech">
+            <datalist id="techilike">
+                <option value="Front End">
+                <option value="Back End">
+                <option value="Database">
+                <option value="ERP">
+                <option value="Cloud">
+            </datalist>
+
+            <br>
+            <input type="submit" value="submit">
+
+        </form>
+    </main>
+</body>
+
+</html>
